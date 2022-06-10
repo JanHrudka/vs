@@ -1,13 +1,7 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
-# Pomocné knihovny
-import argparse
-
-parser = argparse.ArgumentParser()
-parser.add_argument('--input', default = 'mzdy.csv', type = str, help = 'Input file')
-
-def get_data_from_files(args):
+def get_data_from_files():
     """ Načtení dat """
     plochy = {}
     with open('staty_plochy.log', 'r') as file_to_read:
@@ -71,13 +65,12 @@ def write_to_file(data):
             # print(data[point]['hustota'], end='\t')
             # print()
 
-def main(args):
+def main():
     """ Hlavní funkce """
-    plochy, obyvatele = get_data_from_files(args)
+    plochy, obyvatele = get_data_from_files()
     states = marge(plochy, obyvatele)
     states = sort_it(states)
     write_to_file(states)
 
 if __name__ == "__main__":
-    args = parser.parse_args([] if "__file__" not in globals() else None)
-    main(args)
+    main()
