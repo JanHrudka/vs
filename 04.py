@@ -8,7 +8,6 @@ def get_line_pixels():
         pixels.append([x, x, 0])
     for x in range(255, 0, -4):
         pixels.append([x, x, 0])
-    print(len(pixels))
     return pixels
 
 def write_to_file():

@@ -1,2 +1,2 @@
 # vs
-Verzovací systémy 2022 (VŠCHT – LS 2019/2020)
+Verzovací systémy 2022 (VŠCHT – LS 2021/2022)
